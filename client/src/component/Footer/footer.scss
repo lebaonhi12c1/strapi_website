@@ -1,0 +1,34 @@
+.footer_item{
+    .heading{
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    .list_item{
+        margin: 5px 0;
+        cursor: pointer;
+        user-select: none;
+        &:hover{
+            color: var(--primary_color);
+        }
+    }
+    
+}
+.copyright{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .brand{
+        font-size: 20px;
+        color: var(--primary_color);
+        font-weight: 600;
+    }
+}
+@media (max-width: 739px){
+    .copyright{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
