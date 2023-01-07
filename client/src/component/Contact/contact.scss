@@ -1,0 +1,50 @@
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    margin: 100px 0;
+    background-color: var(--primary_color);
+    color: #fff;
+    gap: 150px;
+    .contact_heading{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .contact_controls{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btn_submit{
+            padding: 10px 20px;
+            background-color: var(--primary_color_dark);
+            cursor: pointer;
+            transition: 0.2s;
+            &:hover{
+                background-color: yellow;
+                user-select: none;
+                color: darkblue;
+            }
+            &:active{
+                background-color: var(--primary_color_dark);
+                user-select: none;
+                
+            }
+
+        }
+        #contact_email{
+            padding: 10px 5px;
+            border-style: none;
+            &:focus-visible{
+                outline: none;
+            }
+        }
+    }
+    .contact_social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+}

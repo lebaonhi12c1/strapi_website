@@ -1,0 +1,33 @@
+.categories_container{
+    margin: 100px 20px;
+    .img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+    .categories_item{
+        height: 400px;
+        position: relative;
+    }
+    .categories_content2{
+        height: 100%;
+        position: relative;
+    }
+    .categories_content4{
+        height: 400px;
+        position: relative;
+    }
+    .link{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #000;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        &:hover{
+            color: var(--primary_color);
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.featured_card{
+    display: block;
+}
+
+.featured_item{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+.featured_img{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .main_img{
+       z-index: 1;
+    }
+    &:hover .second_img{
+       z-index: 2;
+    }
+}
+
+.featured_title{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0;
+    &:hover{
+        color: var(--primary_color);
+        text-decoration: underline;
+    }
+}
+.featured_price{
+    display: flex;
+    gap: 20px;
+    
+}
+.featured_price_old{
+    text-decoration: line-through;
+    font-size: 18px;
+}
+.featured_price_new{
+    font-weight: bold;
+    font-size: 18px; 
+}
+.new_section{
+    text-align: center;
+    padding: 10px 20px;
+    color: var(--primary_color);
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

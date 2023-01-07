@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
 :root{
     --primary_color: rgb(0, 132, 255);
+    --primary_color_dark: rgb(4, 42, 68);
     --navbar_height: 80px;
 }
 *{
@@ -28,6 +29,9 @@
     padding-right: 12px;
 }
 .padding{
+    padding-top: 24px;
+}
+.margin{
     padding-top: 24px;
 }
 .pc-0{
@@ -96,6 +100,9 @@
         padding-right: 4px;
     }
     .padding{
+        padding-top: 8px;
+    }
+    .margin{
         padding-top: 8px;
     }
     .mobile-0{
@@ -179,6 +186,9 @@
         padding-right: 8px;
     }
     .padding{
+        padding-top: 16px;
+    }
+    .margin{
         padding-top: 16px;
     }
     .tablet-0{
