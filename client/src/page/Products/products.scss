@@ -1,0 +1,24 @@
+.sub{
+    margin: 0;
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        gap:32px;
+        .control{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .control_heading{
+                font-size: 18px;
+                font-weight: bold;
+              
+            }
+            .control_item{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                margin: 4px 0;
+            }
+        }
+    }
+}

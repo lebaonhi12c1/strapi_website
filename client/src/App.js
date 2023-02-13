@@ -44,7 +44,7 @@ function App() {
           element: <Home/>,
         },
         {
-          path: '/products/:id',
+          path: '/products',
           element: <Products/>,
         },
         {

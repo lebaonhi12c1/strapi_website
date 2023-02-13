@@ -10,6 +10,9 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+.margin_center{
+    margin-top: var(--navbar_height);
+}
 .grid{
     padding: 0;
     display: block;
