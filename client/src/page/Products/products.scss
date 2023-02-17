@@ -1,9 +1,9 @@
 .sub{
-    margin: 0;
     .sidebar{
         display: flex;
         flex-direction: column;
         gap:32px;
+        border-right: 1px solid #000;
         .control{
             display: flex;
             flex-direction: column;
@@ -11,7 +11,6 @@
             .control_heading{
                 font-size: 18px;
                 font-weight: bold;
-              
             }
             .control_item{
                 display: flex;
@@ -19,6 +18,24 @@
                 gap: 16px;
                 margin: 4px 0;
             }
+        }
+    }
+    .filter{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .filter_banner{
+            img{
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+            }
+
+        }
+        .products{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
         }
     }
 }

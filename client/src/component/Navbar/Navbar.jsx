@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
@@ -6,7 +6,12 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import './navbar.scss'
+import Cart from '../Cart/Cart';
+import { useClickOutSide } from '../../globalfunction';
+
 const Navbar = () => {
+  const [opencart, setopencart] = useState(false)
+  const nodeCart = useClickOutSide(()=>setopencart(false))
   return (
         <div className="container">
             <div className="grid wide navbar">
@@ -37,9 +42,13 @@ const Navbar = () => {
                 <div className="nav_right_item"><SearchIcon/></div>
                 <div className="nav_right_item"><PersonOutlineOutlinedIcon/></div>
                 <div className="nav_right_item"><FavoriteBorderOutlinedIcon/></div>
-                <div className="nav_right_item relative">
+                <div className="nav_right_item relative" onClick={e=>{
+                    e.stopPropagation()
+                    setopencart(!opencart)
+                }}>
                     <ShoppingCartOutlinedIcon/>
                     <div className="cart_count">0</div>
+                    {opencart && <Cart nodeCart={nodeCart}/>}
                 </div>
             </div>
         </div>

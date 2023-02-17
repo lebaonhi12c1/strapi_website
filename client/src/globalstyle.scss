@@ -11,7 +11,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 .margin_center{
-    margin-top: var(--navbar_height);
+    margin-top: calc(var(--navbar_height) + 16px);
+    margin-bottom: 40px;
 }
 .grid{
     padding: 0;

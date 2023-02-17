@@ -1,0 +1,109 @@
+.cart{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 10;
+    width: 500px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px,rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    &:hover{
+        color: #000; 
+    }
+    .cart_heading{
+        font-size: 18px;
+        font-weight: bold;
+        
+    }
+    .cart_list{
+        display: flex;
+        flex-direction: column;
+        .cart_item{
+            padding: 4px 0;
+            display: flex;
+            justify-content: space-between;
+            gap:8px;
+            img{
+                width: 60px;
+                height: 80px;
+                object-fit: cover;
+            }
+            .item_info{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                flex: 1;
+                color: #666;
+                .item_heading{
+                    font-weight: bold;
+                }
+                .item_desc{
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    font-size: 12px;
+                }
+                .item_price{
+                    display: flex;
+                    gap: 8px;
+                    color: var(--primary_color);
+                    
+                }
+            }
+            .btn_remove_item{
+                cursor: pointer;
+                .icon{
+                    color: orangered;
+                    transition-duration: 200ms;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                    &:active{
+                        transform: scale(0.9);
+                    }
+                }
+            }
+        }
+    }
+    .sub_total{
+        display: flex;
+        text-transform: uppercase;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+    }
+    .btn_checkout{
+        user-select: none;
+        cursor: pointer;
+        padding: 8px;
+        color: #fff;
+        width: 50%;
+        text-align: center;
+        text-transform: uppercase;
+        transition-duration: 200ms;
+        font-size: 12px;
+        white-space: nowrap;
+        background-color: var(--primary_color);
+        &:hover{
+            transform: scale(1.1);
+            background-color: rgb(12, 12, 104)
+        }
+        &:active{
+            transform: scale(0.9);
+            background-color:var(--primary_color);
+        }
+    }
+    .reset_cart{
+        color: var(--primary_color);
+        cursor: pointer;
+        user-select: none;
+        font-size: 12px;
+        &:hover{
+            color: orangered;
+        }
+    }
+}

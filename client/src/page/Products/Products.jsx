@@ -50,7 +50,7 @@ const Products = () => {
     <div className='grid wide'>
       <div className='margin_center'>
         <div className='row sub'>
-          <div className='col mobile-0 tablet-3 pc-3'>
+          <div className='column mobile-0 tablet-0 pc-3'>
             <div className='sidebar'>
               <div className='control'>
                 <div className='control_heading'>Product Categories</div>
@@ -88,12 +88,12 @@ const Products = () => {
               </div>
             </div>
           </div>
-          <div className="col mobile-12 tablet-9 pc-19">
+          <div className="column mobile-12 tablet-12 pc-9">
             <div className='filter'>
               <div className="filter_banner">
                 <img src="https://previews.123rf.com/images/goodstudio/goodstudio1909/goodstudio190900067/130218841-banner-template-for-fashion-show-with-top-models-wearing-trendy-seasonal-clothes-walking-along-runwa.jpg" alt=""className='img' />
               </div>
-              <div>
+              <div className='products'>
                 {data.map((item)=>{
                   return <Card item={item} key={uuidv4()}/>
                 })}

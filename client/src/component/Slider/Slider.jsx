@@ -2,6 +2,7 @@ import React from 'react'
 import './slider.scss'
 import WestIcon from '@mui/icons-material/West';
 import EastIcon from '@mui/icons-material/East';
+import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 const Slider = () => {
   const data = [
@@ -23,7 +24,7 @@ const Slider = () => {
         <div className='slider' style={{transform: `translateX(-${value*100}vw)`,        transition: 'all 1s ease-in-out'}}>
         {data.map((item)=>{
           return (
-            <img src={item} alt="" width='100%'/>
+            <img key={uuidv4()} src={item} alt="" width='100%'/>
           )  
         })}
         </div>
