@@ -1,7 +1,5 @@
 
 import './App.css';
-import axios from 'axios'
-import { useEffect, useState,} from 'react';
 import './globalstyle.scss'
 import { createBrowserRouter,Outlet,RouterProvider } from 'react-router-dom';
 import Navbar from './component/Navbar/Navbar';
