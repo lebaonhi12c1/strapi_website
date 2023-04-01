@@ -58,7 +58,7 @@ const Slider = () => {
         >
           {data.map(item=>(
             <SwiperSlide key={uuidv4()}>
-              <img srcSet={`${item} 2x`} alt="image-silder" className='image-slider' />
+              <img src={item} alt="silder" className='image-slider' />
             </SwiperSlide>
           ))}
         </Swiper>

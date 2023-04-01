@@ -23,6 +23,10 @@ const Navbar = () => {
     window.addEventListener('resize',handleToggleReponsive)
     return ()=>window.removeEventListener('resize',handleToggleReponsive)
   },[])
+  const handleOpenCartMobile = ()=>{
+    setopencartmobile(true)
+    setopenlist(false)
+  }
   return (
         <div className="container">
             {reponsiveNavbar ?(
@@ -41,7 +45,7 @@ const Navbar = () => {
                             <div className='dropdown'>
                                 {openlist ? <HighlightOffIcon className='icon' onClick={()=>setopenlist(false)}/> : <ViewListIcon  className='icon' onClick={()=>setopenlist(true)}/> }
                                 <div className=' list-container' style={{
-                                    transform: `${openlist ?'translateX(-100px)':'translateX(200px)'}`
+                                    transform: `${openlist ?'translateX(-100px)':'translateX(300px)'}`
                                 }}>
                                     <div className='category box'>
                                         <Link to={'/products/men'}>Men</Link>
@@ -68,7 +72,7 @@ const Navbar = () => {
                                             <FavoriteBorderOutlinedIcon/>
                                             <span>Whilelist</span>
                                         </div>
-                                        <div className='controls' onClick={()=>(setopencartmobile(true),setopenlist(false))}>
+                                        <div className='controls' onClick={handleOpenCartMobile}>
                                             <ShoppingCartOutlinedIcon/>
                                             <span>Your cart</span>
                                             <div className='count'>

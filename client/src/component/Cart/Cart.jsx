@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './cart.scss'
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import { v4 as uuidv4 } from 'uuid'
@@ -46,8 +46,18 @@ function Cart(props) {
             desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi voluptates ducimus quam eum in. Modi, cumque. Saepe eius aspernatur explicabo est, exercitationem quam officia non mollitia culpa labore, blanditiis officiis?'
         },
     ]
+    const [reponsive,setReponsive] = useState(window.innerWidth < 700 ? true: false )
+    useEffect(()=>{
+        const handleReponsive = ()=>{
+            window.innerWidth < 700 ? setReponsive(true):setReponsive(false)
+        }
+        window.addEventListener('resize',handleReponsive)
+        return ()=>window.removeEventListener('resize',handleReponsive)
+    },[])
     return (
-        <div className='cart' ref={props?.nodeCart} onClick={e=>e.stopPropagation()}>
+        <div className='cart' ref={props?.nodeCart} onClick={e=>e.stopPropagation()} style={{
+            width: `${reponsive ? '350px': '500px'}`
+        }}>
             <div className="cart_heading">
                 Product in your cart
             </div>
@@ -80,7 +90,7 @@ function Cart(props) {
                     return total + item.new_price
                 },0).toFixed(2)}$</span>
             </div>
-            <div className='btn_checkout'>proceed to checkouut</div>
+            <div className='btn_checkout' style={{width: `${reponsive && '100%'}`}}>proceed to checkouut</div>
             <div className="reset_cart">Reset cart</div>
         </div>
     );
